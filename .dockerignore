@@ -1,0 +1,50 @@
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# Node
+node_modules
+
+# PHP / Composer vendor (installed fresh in Docker)
+vendor
+
+# Laravel compiled/generated files
+public/build
+public/hot
+public/storage
+storage/*.key
+storage/pail
+bootstrap/cache/*.php
+
+# Environment files (injected by Railway at runtime)
+.env
+.env.*
+!.env.example
+
+# IDE / editor
+.idea
+.vscode
+.fleet
+.nova
+.zed
+.phpactor.json
+
+# Tests
+tests
+phpunit.xml
+.phpunit.cache
+.phpunit.result.cache
+
+# Docker files themselves (no need to copy into image)
+Dockerfile
+.dockerignore
+
+# Misc
+*.log
+.DS_Store
+Thumbs.db
+README.md
+Homestead.json
+Homestead.yaml
+auth.json
