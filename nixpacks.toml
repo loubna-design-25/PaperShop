@@ -1,12 +1,11 @@
 [phases.setup]
-nixPkgs = ["php82", "php82Extensions.sqlite3", "php82Extensions.mbstring", "php82Extensions.xml", "php82Extensions.curl", "composer", "nodejs"]
+nixPkgs = ["php82", "php82Extensions.mbstring", "php82Extensions.xml", "php82Extensions.curl", "php82Extensions.pdo", "php82Extensions.pdo_mysql", "composer", "nodejs"]
 
 [phases.build]
 cmds = [
     "composer install --no-dev",
     "npm install",
     "npm run build",
-    "touch database/database.sqlite",
     "php artisan migrate --force"
 ]
 
